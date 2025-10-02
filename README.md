@@ -1,4 +1,4 @@
-# Cogistics
+# <template_name>
 
 A minimal static site starter that uses Tailwind CSS from the CDN and a zero‑build, client‑side include system for reusable components and layouts.
 
@@ -39,7 +39,7 @@ Example usage on a page:
 <template
   data-include="@layout/head.html"
   data-include-params='{
-    "title": "Home | Cogistics",
+    "title": "Home | <template_name>",
     "metaTitle": "Homepage",
     "metaDescription": "This is the homepage."
   }'
