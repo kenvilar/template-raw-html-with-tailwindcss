@@ -1,0 +1,11 @@
+/* Page-specific styles for Contact (scoped to .page-contact) */
+.page-contact .main-wrapper h1 {
+  color: #10b981; /* emerald-500 */
+}
+
+.page-contact form {
+  background: #f9fafb; /* gray-50 */
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 8px;
+  padding: 16px;
+}

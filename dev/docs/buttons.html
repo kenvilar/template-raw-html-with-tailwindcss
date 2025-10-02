@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cogistics • Buttons</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.14"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --*: initial;
+        --spacing: 1px;
+      }
+    </style>
+    <script type="module">
+      import { include } from "../../include.js";
+      include();
+    </script>
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+  </head>
+  <body class="antialiased">
+    <div class="mx-auto max-w-5xl px-16 py-20">
+      <header class="mb-20 flex items-center justify-between">
+        <h1 class="text-24 font-semibold tracking-tight">Buttons</h1>
+        <a
+          href="/index.html"
+          class="text-12 text-slate-600 hover:text-slate-900"
+          >← Back to Home</a
+        >
+      </header>
+
+      <section class="prose mb-16 max-w-none">
+        <h2 class="text-18 font-semibold">Overview</h2>
+        <p class="text-slate-700">
+          Buttons are provided as a reusable include at
+          <code class="font-mono">@ui/button.html</code>. You can pass
+          parameters to configure <span class="font-mono">text</span>,
+          <span class="font-mono">href</span>, and
+          <span class="font-mono">className</span> (variant).
+        </p>
+      </section>
+
+      <section class="mb-16">
+        <h3
+          class="text-14 mb-6 font-semibold uppercase tracking-wide text-slate-500"
+        >
+          Live examples
+        </h3>
+        <div class="flex flex-wrap gap-12">
+          <!-- Primary -->
+          <div>
+            <div
+              data-include="@ui/button.html"
+              data-include-params='{"text":"Primary", "href":"#", "className":"primary"}'
+            ></div>
+            <div class="text-12 mt-4 text-slate-600">.btn.primary</div>
+          </div>
+
+          <!-- Secondary -->
+          <div>
+            <div
+              data-include="@ui/button.html"
+              data-include-params='{"text":"Secondary", "href":"#", "className":"secondary"}'
+            ></div>
+            <div class="text-12 mt-4 text-slate-600">.btn.secondary</div>
+          </div>
+
+          <!-- Tertiary -->
+          <div>
+            <div
+              data-include="@ui/button.html"
+              data-include-params='{"text":"Tertiary", "href":"#", "className":"tertiary"}'
+            ></div>
+            <div class="text-12 mt-4 text-slate-600">.btn.tertiary</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-16">
+        <h3
+          class="text-14 mb-4 font-semibold uppercase tracking-wide text-slate-500"
+        >
+          Quick usage
+        </h3>
+        <div class="rounded-lg border border-slate-200 bg-white p-12">
+          <pre class="text-12 overflow-x-auto"><code>&lt;div
+  data-include="@ui/button.html"
+  data-include-params='{
+    "text": "Click me",
+    "href": "/get-started",
+    "className": "primary"
+  }'
+&gt;&lt;/div&gt;</code></pre>
+          <p class="text-12 mt-6 text-slate-600">
+            You can also pass params as attributes or via query string:
+          </p>
+          <pre class="text-12 overflow-x-auto"><code>&lt;!-- Attributes --&gt;
+&lt;div data-include="@ui/button.html" data-include-text="Click me" data-include-href="/get-started" data-include-className="secondary"&gt;&lt;/div&gt;
+
+&lt;!-- Query string --&gt;
+&lt;div data-include="@ui/button.html?text=Click%20me&amp;href=%2Fget-started&amp;className=tertiary"&gt;&lt;/div&gt;
+</code></pre>
+        </div>
+      </section>
+
+      <section class="mb-24">
+        <h3
+          class="text-14 mb-4 font-semibold uppercase tracking-wide text-slate-500"
+        >
+          API
+        </h3>
+        <ul class="text-14 text-slate-700">
+          <li>
+            <span class="font-mono">text</span> — string. Visible label.
+            Default: <span class="font-mono">"Button"</span>.
+          </li>
+          <li>
+            <span class="font-mono">href</span> — string. Link destination.
+            Default: <span class="font-mono">"#"</span>.
+          </li>
+          <li>
+            <span class="font-mono">className</span> — string. Visual variant.
+            Supported: <span class="font-mono">"primary"</span>,
+            <span class="font-mono">"secondary"</span>,
+            <span class="font-mono">"tertiary"</span>. Default:
+            <span class="font-mono">"primary"</span>.
+          </li>
+          <li>
+            Optional size modifiers: append <span class="font-mono">sm</span> or
+            <span class="font-mono">lg</span> to the class list if you author
+            variants, e.g.,
+            <span class="font-mono">className: "primary sm"</span>.
+          </li>
+        </ul>
+        <p class="text-12 mt-6 text-slate-600">
+          Note: If you pass parameters via
+          <span class="font-mono">data-include-params</span>, make sure the JSON
+          is valid. Trailing commas and comments are tolerated by the parser in
+          <span class="font-mono">include.js</span>.
+        </p>
+      </section>
+
+      <footer class="text-12 border-t border-slate-200 pt-10 text-slate-500">
+        © 2025 Cogistics. Button docs.
+      </footer>
+    </div>
+  </body>
+</html>

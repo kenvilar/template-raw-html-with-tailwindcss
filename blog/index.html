@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" class="page-blog">
+  <head>
+    <script type="module">
+      import { include } from "../include.js";
+      include();
+    </script>
+    <template
+      data-include="@layout/head.html"
+      data-include-params='{
+      "title": "Blog | Cogistics",
+      "metaTitle": "Blog Page",
+      "metaDescription": "This is the blog page.",
+      }'
+    ></template>
+  </head>
+  <body class="antialiased">
+    <div class="page-wrapper">
+      <div data-include="@layout/header.html"></div>
+      <main class="main-wrapper">
+        <h1 class="text-[20px]">Blog</h1>
+        <p class="text-[12px] text-slate-600">
+          This is a placeholder blog page. Add your posts here.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

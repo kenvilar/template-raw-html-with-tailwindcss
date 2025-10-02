@@ -1,0 +1,20 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ title | Cogistics }}</title>
+<meta name="title" content="{{ metaTitle | Cogistics }}" />
+<meta
+  name="description"
+  content="{{ metaDescription | Cogistics — a simple HTML starter with Tailwind CSS and component includes. }}"
+/>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.14"></script>
+<style type="text/tailwindcss">
+  @theme {
+    --breakpoint-*: initial;
+    --spacing: 1px;
+  }
+  @custom-variant lg (@media screen and (max-width: 1279px));
+  @custom-variant md (@media screen and (max-width: 991px));
+  @custom-variant sm (@media screen and (max-width: 767px));
+  @custom-variant xs (@media screen and (max-width: 479px));
+</style>
+<link rel="stylesheet" href="/assets/css/custom.css" />

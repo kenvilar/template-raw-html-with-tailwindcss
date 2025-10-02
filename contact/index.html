@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" class="page-contact">
+  <head>
+    <script type="module">
+      import { include } from "../include.js";
+      include();
+    </script>
+    <template
+      data-include="@layout/head.html"
+      data-include-params='{
+      "title": "Contact | Cogistics",
+      "metaTitle": "Contact Page",
+      "metaDescription": "This is the contact page.",
+      }'
+    ></template>
+  </head>
+  <body class="antialiased">
+    <div class="page-wrapper">
+      <div data-include="@layout/header.html"></div>
+      <main class="main-wrapper">
+        <h1 class="text-[20px]">Contact</h1>
+        <div data-include="@forms/contact-form.html"></div>
+      </main>
+    </div>
+  </body>
+</html>

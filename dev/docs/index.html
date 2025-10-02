@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script type="module">
+      import { include } from "../../include.js";
+      include();
+    </script>
+    <template
+      data-include="@layout/head.html"
+      data-include-params='{
+      "title": "Cogistics • Docs",
+      "metaTitle": "Docs",
+      "metaDescription": "This is the documentation page.",
+      }'
+    ></template>
+  </head>
+  <body class="antialiased">
+    <div class="mx-auto max-w-5xl px-16 py-20">
+      <header class="mb-20 flex items-center justify-between">
+        <h1 class="text-[24px] font-semibold tracking-tight">Documentation</h1>
+        <a
+          href="/index.html"
+          class="text-12 text-slate-600 hover:text-slate-900"
+          >← Back to Home</a
+        >
+      </header>
+
+      <p class="text-12 mt-8">
+        See documentation:
+        <a class="text-blue-600 hover:underline" href="./buttons.html"
+          >Buttons</a
+        >
+      </p>
+    </div>
+  </body>
+</html>

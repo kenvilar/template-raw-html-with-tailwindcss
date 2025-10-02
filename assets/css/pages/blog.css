@@ -1,0 +1,10 @@
+/* Page-specific styles for Blog (scoped to .page-blog) */
+.page-blog .main-wrapper h1 {
+  color: #0ea5e9; /* sky-500 */
+}
+
+.page-blog .post-card {
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 8px;
+  padding: 16px;
+}

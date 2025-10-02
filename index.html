@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" class="page-home">
+  <head>
+    <script type="module">
+      import { include } from "./include.js";
+      include();
+    </script>
+    <template
+      data-include="@layout/head.html"
+      data-include-params='{
+      "title": "Home | Cogistics",
+      "metaTitle": "Homepage",
+      "metaDescription": "This is the homepage.",
+      }'
+    ></template>
+  </head>
+  <body class="antialiased">
+    <div class="page-wrapper">
+      <div data-include="@layout/header.html"></div>
+      <div class="main-wrapper">
+        <h1 class="text-[20px]">Cogistics</h1>
+        <div
+          data-include="@ui/button.html"
+          data-include-params='{
+          "text": "Click me",
+          "className": "tertiary",
+          }'
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
